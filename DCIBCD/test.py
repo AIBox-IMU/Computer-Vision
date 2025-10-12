@@ -14,7 +14,7 @@ LR = 2e-3
 BATCH_SIZE = 30
 from model import DCIBCD as trainNet
 net = trainNet().to(device)
-netName = "SRCNet_LEVIR-cd"
+netName = "DCIBCD_LEVIR-cd"
 netName = "test/" + netName
 writer = SummaryWriter(netName + "/")
 criterion = combine_loss
@@ -80,4 +80,5 @@ def test():
 if __name__ == "__main__":
     n = 1 # 多次测试
     for i in range(n):
+
         test()
